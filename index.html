@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/3651374-jc-monogram-logo-with-emblem-style-isolated-on-black-background-gratis-vetor.jpg" alt="StreamHub Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#books">Livros</a></li>
+                    <li><a href="#movies">Filmes</a></li>
+                    <li class="dropdown">
+                        <a href="#all" class="dropbtn">Categorias</a>
+                        <div class="dropdown-content">
+                            <a href="#books">Livros</a>
+                            <a href="#movies">Filmes</a>
+                            <a href="#all">Mais</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="books" class="carousel-section">
+        <h2>Livros em destaque</h2>
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev-btn" onclick="moveCarousel('books', -1)">&#10094;</button>
+            <div class="carousel">
+                <div class="carousel-track" id="books-track">
+                    <div class="carousel-item"><img src="https://editoradraco.com/wp-content/uploads/2018/02/sherlock-holmes.jpg" alt="Livro 1"></div>
+                    <div class="carousel-item"><img src="https://livraria.rodrigogurgel.com.br/image/cache/data/api/produtos/19757-515x800.jpg?1652116287" alt="Livro 2"></div>
+                    <div class="carousel-item"><img src="https://images.tcdn.com.br/img/img_prod/1271663/arsene_lupin_o_ladrao_de_casaca_637_1_bfb1e7083e122a00e9a7b7d3964195ea.jpg" alt="Livro 3"></div>
+                    <div class="carousel-item"><img src="https://m.media-amazon.com/images/I/51JY59aaGML._SY445_SX342_.jpg" alt="Livro 4"></div>
+                </div>
+            </div>
+            <button class="carousel-btn next-btn" onclick="moveCarousel('books', 1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="movies" class="carousel-section">
+        <h2>Filmes em destaque</h2>
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev-btn" onclick="moveCarousel('movies', -1)">&#10094;</button>
+            <div class="carousel">
+                <div class="carousel-track" id="movies-track">
+                    <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/pt/thumb/2/2a/Deadpool_%26_Wolverine_cartaz.jpg/250px-Deadpool_%26_Wolverine_cartaz.jpg" alt="Filme 1"></div>
+                    <div class="carousel-item"><img src="https://br.web.img3.acsta.net/c_310_420/pictures/210/299/21029996_20130821205722213.jpg" alt="Filme 2"></div>
+                    <div class="carousel-item"><img src="https://media.fstatic.com/jUU1IC1L_jRBKeJwKdmu2BIkXow=/210x312/smart/filters:format(webp)/media/movies/covers/2019/07/The-Boys-poster.jpg" alt="Filme 3"></div>
+                    <div class="carousel-item"><img src="https://br.web.img3.acsta.net/c_310_420/pictures/21/01/11/15/25/3385672.jpg" alt="Filme 4"></div>
+                </div>
+            </div>
+            <button class="carousel-btn next-btn" onclick="moveCarousel('movies', 1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="all" class="carousel-section">
+        <h2>Livros e Filmes</h2>
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev-btn" onclick="moveCarousel('all', -1)">&#10094;</button>
+            <div class="carousel">
+                <div class="carousel-track" id="all-track">
+                    <div class="carousel-item"><img src="https://m.media-amazon.com/images/I/41gBzGDn3XL._SY445_SX342_.jpg" alt="Livro 1"></div>
+                    <div class="carousel-item"><img src="https://static.wikia.nocookie.net/dccomics/images/c/ce/Ad%C3%A3o_Negro_Poster.png/revision/latest?cb=20230501222259&path-prefix=pt" alt="Filme 1"></div>
+                    <div class="carousel-item"><img src="https://s5.static.brasilescola.uol.com.br/be/2023/09/capa-do-livro-o-pequeno-principe-de-antoine-de-saint-exupery-publicado-pela-faro-editorial.jpg" alt="Livro 2"></div>
+                    <div class="carousel-item"><img src="https://static.wikia.nocookie.net/dublagem/images/5/57/Um_maluco.jpeg/revision/latest?cb=20220312005832&path-prefix=pt-br" alt="Filme 2"></div>
+                    <div class="carousel-item"><img src="http://livrosdaraposavermelha.com.br/wp-content/uploads/2019/09/RV-O-gato-preto.png" alt="Livro 3"></div>
+                    <div class="carousel-item"><img src="https://musicimage.xboxlive.com/catalog/video.movie.8D6KGWXP5NK4/image?locale=pt-br&mode=crop&purposes=BoxArt&q=90&h=300&w=200&format=jpg" alt="Filme 3"></div>
+                    <div class="carousel-item"><img src="https://static.wikia.nocookie.net/dublagem/images/9/9a/Vov%C3%B3zona.jpeg/revision/latest?cb=20230815221050&path-prefix=pt-br" alt="Livro 4"></div>
+                    <div class="carousel-item"><img src="https://br.web.img3.acsta.net/c_310_420/pictures/16/03/17/23/42/509402.jpg" alt="Filme 4"></div>
+                </div
+            </div>
+            <button class="carousel-btn next-btn" onclick="moveCarousel('all', 1)">&#10095;</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 StreamHub. Todos os direitos reservados.</p>
+            <div class="names">
+                <p>istalisson</p>
+                <p>eduardo</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
